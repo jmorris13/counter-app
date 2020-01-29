@@ -35,7 +35,7 @@ class App extends Component {
     let counters = this.state.counters.map(c => {
       return c;
     });
-    counters.push({ id: this.state.counters.length, value: 0 });
+    counters.push({ id: this.state.counters.length + 1, value: 0 });
     this.setState({ counters });
   };
 
@@ -48,7 +48,6 @@ class App extends Component {
   };
   handleDelete = counterId => {
     const counters = this.state.counters.filter(c => c.id !== counterId);
-
     this.setState({ counters });
   };
 
